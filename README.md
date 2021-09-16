@@ -19,3 +19,19 @@ Reset DB:
 
 Start Server:
 `npm run watch`
+
+## Routes 🤖
+
+Get all user diagrams
+`/api/diagrams/:userId`
+
+Get selected diagram
+`/api/diagrams/select/:diagramId`
+
+Create new diagram
+`/api/diagrams/create`
+data format: `{ diagramData: {title: , dbmlData: , userId:} }`
+
+Update selected diagram
+`/api/diagrams/update/:diagramId`
+data format: `{ diagramUpdateData: {title: , dbmlData: , userId:} }`
