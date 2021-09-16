@@ -38,15 +38,15 @@ if (env === 'production') {
 //= ==============================
 // Initialize models
 //= ==============================
-db.user = userModel(sequelize, Sequelize.DataTypes);
-db.diagram = diagramModel(sequelize, Sequelize.DataTypes);
+db.User = userModel(sequelize, Sequelize.DataTypes);
+db.Diagram = diagramModel(sequelize, Sequelize.DataTypes);
 
 //= ==============================
 // Define all relationships here
 //= ==============================
 // E.g. 1-M associations between orders table and associated tables
-db.user.hasMany(db.diagram);
-db.diagram.belongsTo(db.user);
+db.User.hasMany(db.Diagram);
+db.Diagram.belongsTo(db.User);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
