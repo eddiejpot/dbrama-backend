@@ -1,20 +1,29 @@
 import { resolve } from 'path';
-import db from './models/index.mjs';
+import db from '../models/index.mjs';
 
 // ========================================================== IMPORT CONTROLLERS
-import initExampleController from './controllers/exampleController.mjs';
+import initDiagramsController from '../controllers/diagramsController.mjs';
 
 // =============================================================== EXPORT ROUTES
 export default function apiRoutes(app) {
-  const exampleController = initExampleController(db);
+  const diagramsController = initDiagramsController(db);
 
-  //===================================== SET ROUTES
+  //= ==================================== SET ROUTES
 
-  // example
-  app.get('/api/stores', exampleController.index);
+  // get all user diagrams
+  app.get('/api/diagrams/:userId', diagramsController.index);
+
+  // get selected diagram
+  app.get('/api/diagrams/select/:diagramId', diagramsController.find);
+
+  // create new diagram
+  app.post('/api/diagrams/create', diagramsController.create);
+
+  // update selected diagram
+  app.put('/api/diagrams/update/:diagramId', diagramsController.update);
 
   // misc
   app.get('/', (request, response) => {
-    response.send('API');
+    response.send('DBRAMA API');
   });
 }

@@ -66,7 +66,7 @@ module.exports = {
       updated_at: new Date(),
     };
     const seedTwo = {
-      title: 'oline store schema',
+      title: 'online store schema',
       dbml_data: dbmlDataTwo,
       user_id: 1,
       created_at: new Date(),
