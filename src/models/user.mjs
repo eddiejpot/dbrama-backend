@@ -1,10 +1,19 @@
-export default function exampleModelTwo(sequelize, DataTypes) {
-  return sequelize.define('exampleModelTwo', {
+export default function userModel(sequelize, DataTypes) {
+  return sequelize.define('user', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
+    },
+    userName: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING,
+    },
+    password: {
+      type: DataTypes.STRING,
     },
     createdAt: {
       allowNull: false,

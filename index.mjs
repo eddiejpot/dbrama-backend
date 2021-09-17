@@ -7,7 +7,7 @@ import cors from 'cors';
 import apiRoutes from './src/routes/api.mjs';
 
 // insert your own local url here when testing
-const TEST_LOCAL_FRONTEND_URL = ['http://localhost:3000', 'http://localhost:3001']
+const TEST_LOCAL_FRONTEND_URL = ['http://localhost:3000', 'http://localhost:3001'];
 const FRONTEND_URL = process.env.FRONTEND_URL || TEST_LOCAL_FRONTEND_URL;
 
 // Initialise Express instance

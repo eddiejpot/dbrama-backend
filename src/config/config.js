@@ -1,9 +1,8 @@
 module.exports = {
   development: {
-    username: '<DATABASE-USERAME>',
-    // username: 'jyotikattani',
+    username: 'eddiejpot',
     password: null,
-    database: '<DATABASE-NAME>',
+    database: 'dbrama_backend',
     host: '127.0.0.1',
     dialect: 'postgres',
   },

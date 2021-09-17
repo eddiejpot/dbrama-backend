@@ -4,11 +4,11 @@ import url from 'url';
 // import config
 import allConfig from '../config/config.js';
 
-//===============================
+//= ==============================
 // import models here
-//===============================
-import exampleModelOne from './exampleOne.mjs';
-import exampleModelTwo from './exampleTwo.mjs';
+//= ==============================
+import userModel from './user.mjs';
+import diagramModel from './diagram.mjs';
 
 const env = process.env.NODE_ENV || 'development';
 const config = allConfig[env];
@@ -35,18 +35,18 @@ if (env === 'production') {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-//===============================
+//= ==============================
 // Initialize models
-//===============================
-db.exampleOne = exampleModelOne(sequelize, Sequelize.DataTypes);
-db.exampleTwo = exampleModelTwo(sequelize, Sequelize.DataTypes);
+//= ==============================
+db.User = userModel(sequelize, Sequelize.DataTypes);
+db.Diagram = diagramModel(sequelize, Sequelize.DataTypes);
 
-//===============================
+//= ==============================
 // Define all relationships here
-//===============================
+//= ==============================
 // E.g. 1-M associations between orders table and associated tables
-db.exampleModelOne.hasMany(db.exampleModelTwo);
-db.exampleModelTwo.belongsTo(db.exampleModelOne);
+db.User.hasMany(db.Diagram);
+db.Diagram.belongsTo(db.User);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
