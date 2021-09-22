@@ -1,6 +1,6 @@
-# Express-Sequelize-Boilerplate
+# DBRAMA BACKEND
 
-## DB Setup 🤖
+## DB Setup 💻
 
 **If you have not created the DB on your local**
 Step 1: Change username in config/config.js
@@ -15,12 +15,12 @@ Setup DB:
 Reset DB:
 `npm run reset`
 
-## Start Server 🤖
+## Start Server 💻
 
 Start Server:
 `npm run watch`
 
-## Routes 🤖
+## Routes 🔗
 
 Get all user diagrams
 `/api/diagrams/:userId`
@@ -29,9 +29,9 @@ Get selected diagram
 `/api/diagrams/select/:diagramId`
 
 Create new diagram
-`/api/diagrams/create`
-data format: `{ diagramData: {title: , dbmlData: , userId:} }`
+`/api/diagrams/create/userId`
+data format: `{title: , dbmlData: , userId:}`
 
 Update selected diagram
 `/api/diagrams/update/:diagramId`
-data format: `{ diagramUpdateData: {title: , dbmlData: , userId:} }`
+data format: `{title: , dbmlData: , userId:}`

@@ -17,10 +17,13 @@ export default function apiRoutes(app) {
   app.get('/api/diagrams/select/:diagramId', diagramsController.find);
 
   // create new diagram
-  app.post('/api/diagrams/create', diagramsController.create);
+  app.post('/api/diagrams/create/:userId', diagramsController.create);
 
   // update selected diagram
   app.put('/api/diagrams/update/:diagramId', diagramsController.update);
+
+  // update selected diagram
+  app.delete('/api/diagrams/delete/:diagramId', diagramsController.destroy);
 
   // misc
   app.get('/', (request, response) => {
