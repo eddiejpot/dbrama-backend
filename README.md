@@ -1,6 +1,6 @@
 # DBRAMA BACKEND
 
-## DB Setup 💻
+## 💻 DB Setup
 
 **If you have not created the DB on your local**
 Step 1: Change username in config/config.js
@@ -15,12 +15,12 @@ Setup DB:
 Reset DB:
 `npm run reset`
 
-## Start Server 💻
+## 💻 Start Server
 
 Start Server:
 `npm run watch`
 
-## Routes 🔗
+## 🔗 Routes
 
 Get all user diagrams
 `/api/diagrams/:userId`
@@ -35,3 +35,8 @@ data format: `{title: , dbmlData: , userId:}`
 Update selected diagram
 `/api/diagrams/update/:diagramId`
 data format: `{title: , dbmlData: , userId:}`
+
+## 💻 Deployed app
+
+<!-- prettier-ignore -->
+<a href="https://aqueous-cliffs-04831.herokuapp.com/" target="_blank">Backend on Heroku</a>
